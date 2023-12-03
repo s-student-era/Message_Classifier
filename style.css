@@ -1,0 +1,196 @@
+body{
+    justify-content: center;
+    box-sizing:border-box;
+    background-color: black;
+    cursor:crosshair;
+}
+
+.absolute{
+    position: absolute;
+    top: 50px !important;
+    inset: 0;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.analyser{
+    position: absolute;
+    inset: 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 100px;
+    text-align: center;
+}
+
+textarea{
+    padding: 8px 13px;
+    color:rgb(255, 255, 255);
+    background:rgb(17, 17, 17);
+    border:0.25em solid black;
+    border-radius: 10px;
+    opacity: 100%;
+    font-size: 18px;
+    font-family:'Verdana';
+    cursor:text;
+    width:100%;
+    resize: none;
+    outline: none;
+}
+
+input{
+    padding: 8px 30px;
+    font-size: 15px;
+    font-family:'Verdana';
+    font-weight: lighter;
+    cursor:pointer;
+    max-width:100px;
+    border-radius: 30px;
+    margin: 0 auto;
+    top:30px;
+    position: relative;
+    color: rgb(221, 221, 221);
+    --glow-color:rgb(207, 99, 193);
+    --glow-spread-color:rgb(152, 24, 202);
+    --enhanced-glow-color:rgb(219, 141, 230)(225, 0, 255);
+    --btn-color:rgb(163, 90, 163);
+    border: rgb(0, 0, 0);
+    background-color: var(--btn-color);
+    outline: none;
+    box-shadow: 0 0 1em 0.1em var(--glow-color),
+    0 0 1em 0.1em var(--glow-spread-color), 
+    inset 0 0 0.2em 0.1em var(--glow-color);
+    text-shadow: 0 0 0.1em var(--glow-color);
+    transition: all 0.3s;
+}
+
+input::after{
+    pointer-events: none;
+    content:"";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(15em);
+    opacity: 0.7;
+    transform: perspective(1em) rotateX('35deg') scale(1,0.6);
+}
+
+input:hover{
+    color: rgb(252, 252, 252);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 2em 1em plum, 
+    inset 0 0 0.5em 0.2em var(--glow-color);
+}
+
+input:active{
+    box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2em 1em var(--glow-spread-color), 
+    inset 0 0 0.4em 0.25em var(--glow-color);
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.bg-shape1{
+    width: 300px;
+    height: 300px;
+    border-radius: 9000px;
+    position: relative;
+    animation: one 10s infinite;
+}
+
+.bg-shape2{
+    width: 200px;
+    height: 200px;
+    border-radius: 9000px;
+    position: relative;
+    animation: two 10s infinite;
+}
+
+.bg-shape-result{
+    width: 300px;
+    height:300px;
+    border-radius: 9000px;
+    position: relative;
+    animation: three 10s infinite;
+}
+
+@keyframes one{
+    0%{left:0px;top:0px;}
+    25%{left:-200px;top:70px;}
+    50%{left:20px;top:150px;}
+    75%{left:200px;top:20px;}
+    100%{left:0px;top:0px;}
+}
+
+@keyframes two{
+    0%{left:0px;top:0px;}
+    25%{left:50px;top:10px;}
+    50%{left:100px;top:50px;}
+    75%{left:-500px;top:200px;}
+    100%{left:0px;top:0px;}
+}
+
+@keyframes three{
+    0%{left:0px;top:150px;width: 100px;height: 100px;}
+    25%{left:0px;top:100px;width: 300px;height: 300px;}
+    50%{left:0px;top:150px;width: 100px;height: 100px;}
+    75%{left:0px;top:100px;width: 300px;height: 300px;}
+    100%{left:0px;top:150px;width: 100px;height: 100px;}
+}
+
+.opacity-50{
+    opacity: .5;
+}
+
+.bg-blur{
+    filter:blur(90px);
+}
+
+.bg-color1{
+    background-color: rgb(133, 133, 133);
+}
+
+.bg-color2{
+    background-color:rgb(255, 250, 253);
+}
+
+.bg-color-spam{
+    background-color: rgb(228, 30, 30);
+}
+
+.bg-color-normal{
+    background-color: rgb(47, 226, 31);
+}
+
+h1{
+    margin: 0 auto;
+    top: 100px;
+    text-align: center;
+    font-family:'Verdana';
+    font-style: italic;
+    font-weight: lighter;
+    color:whitesmoke;
+    text-shadow:black;
+    font-size: 50px;
+    position: relative;
+}
+
+p{
+    margin: 0 auto;
+    top: 270px;
+    text-align: center;
+    font-family:'Verdana';
+    font-style: italic;
+    font-weight: lighter;
+    color:whitesmoke;
+    text-shadow:black;
+    font-size: 30px;
+    position: relative;
+}

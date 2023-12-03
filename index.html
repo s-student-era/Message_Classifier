@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>detector</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+
+        <div class="absolute">
+            <div class="absolute inset-0 justify-center">
+                <div class="bg-shape1 bg-color1 opacity-50 bg-blur"></div>
+                <div class="bg-shape2 bg-color2 opacity-50 bg-blur"></div>
+                <div class="bg-shape1 bg-color1 opacity-50 bg-blur"></div>
+            </div>
+            <div><h1>Message Classifier</h1></div>
+        <div class="analyser">
+        <form action="{{url_for('predict')}}", method="POST">
+            <textarea name='input_message', type='text', placeholder="paste your message here..." rows="4" cols="50" style="text-decoration-color: darkslategrey;"> </textarea><br>
+            <input type="submit", value="check">
+        </form>
+        </div>
+    </div>
+    </body>
+</html>
