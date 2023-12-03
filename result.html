@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>result</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='https://s-student-era.github.io/Message_Classifier/style.css')}}">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div><h1>Message Classifier</h1></div>
+        {% if prediction==1 %}
+        <div class="absolute">
+            <div class="absolute inset-0 justify-center">
+            <div class="bg-shape-result bg-color-spam opacity-50 bg-blur"></div>
+            </div>  
+            <div><p> Spam </p></div>
+        </div>
+        {% elif prediction==0 %}
+        <div class="absolute">
+            <div class="absolute inset-0 justify-center">
+            <div class="bg-shape-result bg-color-normal opacity-50 bg-blur"></div>
+            </div>
+            <div><p> Not spam </p></div>
+        </div>
+        {%endif%}
+        </div>
+    </body>
+</html>
